@@ -1,0 +1,7 @@
+gcc -c -g -std=c99 -m64  main.c
+nasm -g dwarf2 -f elf64 ft_strlen.s
+gcc -m64 -g -std=c99 -o ft_strlen main.o ft_strlen.o
+
+
+
+slides de cours ici : http://www.lacl.fr/tan/asm
