@@ -3,16 +3,19 @@
 
 ft_strcmp :
 		mov rcx, 0
+
 while :
 		cmp BYTE [rdi + rcx], 0
 		je return
-		cmp BYTE [rdi + rcx], BYTE [rsi + rcx]
+		mov dl, BYTE [rsi + rcx]
+		cmp BYTE [rdi + rcx], dl
 		jne return
 		inc rcx
 		jmp while
 return :
-		mov rax, [rdi + rcx]
-		sub rax, [rsi + rcx]
+		mov rax, 0
+		mov ax, BYTE [rdi + rcx]
+		sub ax, BYTE [rsi + rcx]
 		ret
 
 
