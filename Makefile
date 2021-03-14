@@ -1,4 +1,5 @@
-SRCS_ASM =			ft_strlen.s
+SRCS_ASM =			ft_strlen.s\
+					ft_strcmp.s
 
 SRCS_TEST =			main.c
 
