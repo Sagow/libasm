@@ -14,8 +14,14 @@ while :
 		jmp while
 return :
 		mov rax, 0
-		mov ax, BYTE [rdi + rcx]
-		sub ax, BYTE [rsi + rcx]
+		mov al, BYTE [rdi + rcx]
+		sub al, BYTE [rsi + rcx]
+		mov dl, BYTE [rdi + rcx]
+		cmp BYTE [rsi + rcx], dl
+		jg overflow
+		ret
+overflow :
+		sub rax, 256
 		ret
 
 

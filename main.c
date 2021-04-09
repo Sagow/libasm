@@ -21,10 +21,11 @@ int main()
 int main()
 {
 	//main ft_strcmp
-	char	*str1 = "a";
-	char	*str2 = "z";
+	char	*str1 = "affff";
+	char	*str2 = "gij";
 	int		ret = ft_strcmp(str1, str2);
 
 	printf("diff entre %s et %s = %d\n", str1, str2, ret);
+	printf("le vrai : %d\n", strcmp(str1, str2));
 	return (0);
 }
