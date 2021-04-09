@@ -1,4 +1,5 @@
 SRCS_ASM =			ft_strlen.s		\
+					ft_strcpy.s		\
 					ft_strcmp.s
 
 SRCS_TEST =			main.c
@@ -42,8 +43,8 @@ fclean :	clean
 re :		fclean all
 
 test :		all ${OBJS_TEST}
-			@${CC_TEST} -o ${NAME_TEST} ${OBJS_TEST} $(NAME)
-			@./${NAME_TEST}
+			${CC_TEST} -o ${NAME_TEST} ${OBJS_TEST} $(NAME)
+			./${NAME_TEST}
 
 .PHONY :	all clean fclean re test
 
