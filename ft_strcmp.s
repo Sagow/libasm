@@ -3,7 +3,8 @@
 
 ft_strcmp :
 		mov rcx, 0
-
+		cmp rdi, 0
+		je null
 while :
 		cmp BYTE [rdi + rcx], 0
 		je return
@@ -24,4 +25,9 @@ overflow :
 		sub rax, 256
 		ret
 
+null :
+		cmp rsi, 0
+		jne while
+		mov rax, 0
+		ret
 
